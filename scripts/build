@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# prepare
+rm -rf dist
+
+# lint
+pnpm lint:typecheck -p tsconfig.production.json
+
+# build
+pnpm tsc -p tsconfig.production.json
